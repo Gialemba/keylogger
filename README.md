@@ -8,7 +8,7 @@ This project demonstrates a basic keylogging technique on Linux systems. The key
 
 ##  Features
 
-- **Keystroke Capture**: Records key presses and releases.
+- **Keystroke Capture**: Records key presses.
 - **Low-Level Implementation**: Utilizes kernel-level hooks for capturing input.
 - **Educational Purpose**: Designed to demonstrate keylogging techniques for learning and research.
 
