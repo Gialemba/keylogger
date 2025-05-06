@@ -97,7 +97,7 @@ static int __init ft_init_module(void)
     }
 	ret = register_keyboard_notifier(&keyboard_nb);
     if (ret) {
-        pr_err("Failed to register keyboard notifier\n");
+        printk(KERN_INFO "Failed to register keyboard notifier\n");
         return ret;
     }
 
