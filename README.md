@@ -1,6 +1,6 @@
 # Keylogger
 
-A simple proof-of-concept (PoC) Linux keylogger implemented in C.
+A simple skeleton of a Linux keylogger implemented in C.
 
 ##  Overview
 
